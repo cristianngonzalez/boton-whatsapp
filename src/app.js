@@ -2,10 +2,12 @@ var app = new Vue({
     el: '#app',
     data: {
       message: 'Give me follow in instagram ;)',
+      messageConverted: '',
       countries: allCountries,
       countrySelected: '+54',
       phoneNumber: '',
       color: '#00CC33',
+      position: 'left'
     },
     methods:{
       /*To copy the code*/
@@ -22,6 +24,28 @@ var app = new Vue({
         const str = document.getElementById(id);
         window.getSelection().selectAllChildren(str);
         document.execCommand("Copy")
+      },
+
+      /*Change message*/
+      changeMessage(event){
+
+        this.messageConverted = this.message.replace(/ /g , '%20');
+
+        console.log(this.messageConverted)
+
+      },
+
+      setPosition(event , position){
+        //Toggle class pushed button
+        let buttons = document.getElementsByClassName('buttonPosition')
+        buttons[0].classList.remove('buttonPositionPushed');
+        buttons[1].classList.remove('buttonPositionPushed');
+
+        event.target.classList.add('buttonPositionPushed');
+
+        console.log(position);  
+
+        this.position = position;
       }
     }
 
