@@ -19,6 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
     <title>Make your whatsapp button easylly</title>
 </head>
@@ -39,7 +41,7 @@
         <br>
 
         <label for="phoneNumber">Write your whatsapp phoneNumber (without country country code)</label><br>
-        <input type="text" v-model="phoneNumber" name="phoneNumber"><br>
+        <input type="text" v-model="phoneNumber" name="phoneNumber" @change="changePhoneNumber($event)"><br>
 
         <label for="message">Writhe your message</label><br>
         <input type="text" v-model="message" name="message"><br>
@@ -58,16 +60,21 @@
                 <div class="fakeButton red"></div>
                 <div class="fakeButton yellow"></div>
                 <div class="fakeButton green"></div>
+
+                <button type="button" @click="copyToClipBoard($event , 'styleTag')" class="copyButton">Copy</button>
             </div>
-            <code id="styleTag">
 
-                &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"&gt; <br>
+            <span>
+                <code id="styleTag">
 
-                &lt;<code class="codeKeyWordTag">style</code>&gt; <br>
-                .whatsapplink{position:fixed;width:60px;height:60px;<br>bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:40px;box-shadow:2px 2px 3px #999;z-index:100}.whatsapplink .bi{position: absolute;left:10px;top:7px;}.whatsapplink:hover{text-decoration:none;color:#25d366;background-color:#fff}.whatsapp-box{margin-top:16px}<br>
-                &lt;<code class="codeKeyWordTag">/style</code>&gt;
-            </code><br>
-            <button type="button" onclick="copyEvent('styleTag')">Copy</button><br>
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"&gt; <br>
+    
+                    &lt;<code class="codeKeyWordTag">style</code>&gt; <br>
+                    .whatsapplink{position:fixed;width:60px;height:60px;<br>bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:40px;box-shadow:2px 2px 3px #999;z-index:100}.whatsapplink .bi{position: absolute;left:10px;top:7px;}.whatsapplink:hover{text-decoration:none;color:#25d366;background-color:#fff}.whatsapp-box{margin-top:16px}<br>
+                    &lt;<code class="codeKeyWordTag">/style</code>&gt;
+                </code>
+            </span>
+            <br>
         </div>
         <!--------------------------------------------------------------------------------------------->
 
@@ -78,19 +85,23 @@
                 <div class="fakeButton red"></div>
                 <div class="fakeButton yellow"></div>
                 <div class="fakeButton green"></div>
+
+                <button type="button" class="copyButton" @click="copyToClipBoard($event , 'buttonTag')">Copy</button>
             </div>
-            <code id="buttonTag">
+            <span>
+                <code id="buttonTag">
 
-                &lt;<code class="codeKeyWordTag">div</code> <code class="codeKeyWordClass">class</code>=<code class="codeString">"whatsapp-box"</code>&gt;
-                &lt;<code class="codeKeyWordTag">a</code> <code class="codeKeyWordClass">href</code>=<code class="codeString">"https://api.whatsapp.com/send?phone=+541170139816&text=Hola%20Me%20Gusto%20tu%20repositorio"</code> class="whatsapplink" target="_blank" &gt;
-                
-                    &lt;i class="bi bi-whatsapp"&gt;&lt;/i&gt;<br>
-
-                &lt;/<code class="codeKeyWordTag">a</code>&gt;
-                &lt;/div&gt;
-
-            </code><br>
-            <button type="button" onclick="copyEvent('buttonTag')">Copy</button><br>
+                    &lt;<code class="codeKeyWordTag">div</code> <code class="codeKeyWordClass">class</code>=<code class="codeString">"whatsapp-box"</code>&gt;
+                    &lt;<code class="codeKeyWordTag">a</code> <code class="codeKeyWordClass">href</code>=<code class="codeString">"https://api.whatsapp.com/send?phone={{countrySelected}}{{phoneNumber}}&text=Hola%20Me%20Gusto%20tu%20repositorio"</code> class="whatsapplink" target="_blank" &gt;
+                    
+                        &lt;i class="bi bi-whatsapp"&gt;&lt;/i&gt;<br>
+    
+                    &lt;/<code class="codeKeyWordTag">a</code>&gt;
+                    &lt;/div&gt;
+    
+                </code>
+            </span>
+           <br>
         </div>
         
 
@@ -101,8 +112,6 @@
         <h3></h3>
     </footer>
     
-    <!--Code to copyCliptboard-->
-    <script src="src/modules/copyClipBoard.js"></script>
 
     <script src="src/modules/allCountries.js"></script>
     <script src="src/app.js"></script>    

@@ -53,8 +53,8 @@ input:link {
     border-radius: 10px;
     background: black;
     text-align: left;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;   
 }
 
 .codeKeyWordTag{
@@ -68,7 +68,7 @@ input:link {
 }
 
 .fakeButtonsCloseBox{
-    height: 20px;
+    height: 30px;
 }
 
 .fakeButton{
@@ -77,7 +77,7 @@ input:link {
     border-radius: 50px;
     float: left;
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 .red{
     background: red;
@@ -87,4 +87,14 @@ input:link {
 }
 .yellow{
     background: yellow;
+}
+
+.copyButton{
+    background: white;
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: absolute;
+    right: calc(50% - 240px);
 }
