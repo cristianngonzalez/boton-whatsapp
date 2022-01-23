@@ -1,168 +1,28 @@
-*{
-    font-family: 'Fredoka One', cursive;
-    text-decoration: none;
-    list-style: none;
+.whatsapp-enlace{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
 }
 
-header{
-    width: 100%;
-    text-align: center;
-    background: white;
-    color: #82CAAF;
+.whatsapp-enlace svg{
+	margin-top: 11px;
 }
 
-#app{
-    background: #82CAAF;
-    text-align: center;
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.whatsapp-enlace:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
 }
 
-select{
-    padding: 5px;
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 50px;
-    text-align: center;
-    color: white;
+.whatsapp-box{
+	margin-top:16px;
 }
-
-option{
-    background: white;
-    color: black;
-}
-
-input{
-    width: 500px;
-    padding: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 50px;
-    color: white;
-}
-
-input:link {
-    border: 2px solid  red;
-}
-
-#inputColor{
-    width: 50px;
-    padding: 0;
-    margin-top: 5px;
-}
-
-.row{
-    margin-top: 10px;
-    width: 50%;
-    margin-left: calc(25%);
-    height: 70px;
-}
-
-.column{
-    width: 50%;
-    float: left;
-}
-
-.buttonPosition{
-    background: none;
-    border: 2px solid white;
-    border-radius: 50px;
-    color: white;
-    margin-top: 5px;
-}
-
-.buttonPositionPushed{
-    background: white;
-    color: #82CAAF;
-}
-
-.codebox{
-    width: 500px;
-    margin-left: calc(50% - 250px);
-    border-radius: 10px;
-    background: black;
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;   
-    font-size: 13px;
-}
-
-.codeKeyWordTag{
-    color: blue;
-}
-.codeKeyWordClass{
-    color: orange;
-}
-.codeString{
-    color: greenyellow;
-}
-
-.fakeButtonsCloseBox{
-    height: 30px;
-}
-
-.fakeButton{
-    width: 15px;
-    height: 15px;
-    border-radius: 50px;
-    float: left;
-    margin-left: 10px;
-    margin-top: 7px;
-}
-.red{
-    background: red;
-}
-.green{
-    background: #00CC33;
-}
-.yellow{
-    background: yellow;
-}
-
-.copyButton{
-    background: white;
-    border: none;
-    height: 20px;
-    border-radius: 5px;
-    margin-top: 5px;
-    position: absolute;
-    right: calc(50% - 240px);
-}
-
-footer{
-    text-align: center;
-    color: #82CAAF;
-}
-
-footer h3{
-    display: block;
-    float: none;
-    color: #82CAAF;
-}
-
-footer a{
-    color: #82CAAF;
-}
-
-#socialLinks{
-    margin-left: calc(50% - 100px);
-    background: red;
-    color: #82CAAF;
-}
-
-#socialLinks li{
-    float: left;
-    text-decoration: none;
-    list-style: none;
-    position: relative;
-    margin-left: 10px;
-    color: #82CAAF;
-}
-#socialLinks a{
-    color: #82CAAF;
-}
-
-
